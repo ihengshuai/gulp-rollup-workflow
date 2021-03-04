@@ -1,0 +1,10 @@
+/* 脚部 */
+
+@import "./_mixin";
+@import "./func";
+@import "./extend";
+@import "./variable";
+
+$footerH: 380;
+$mFooterH: 435;
+$maxWidth: 1920 - 300;

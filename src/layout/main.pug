@@ -1,0 +1,27 @@
+block vars
+
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title #{title}-主题
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		meta(name="keywords" content="")
+		meta(name="description" content="")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no")
+		link(rel="shortcut icon" href="./favicon.png" type="image/x-icon")
+		link(rel="stylesheet" href="./style/common.css")
+		block styles
+		script(src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js")
+	body
+		include ./nav.pug
+
+		block content
+
+		if showFooter == false
+		else
+			include ./footer.pug
+
+
+		script(src="./js/common.js")
+		block scripts

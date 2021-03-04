@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"target": "ES3",
+		"module": "ES2015",
+		"sourceMap": true,
+		"outDir": "src/js/",
+		"experimentalDecorators": true,
+	},
+	"include": [
+		"src/ts/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}

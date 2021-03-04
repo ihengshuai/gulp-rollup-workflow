@@ -1,0 +1,12 @@
+node_modules
+dist
+src/js
+
+.idea
+.vscode
+.DS_Store
+
+*.log
+*.lock
+*.error
+*.debug

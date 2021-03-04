@@ -1,0 +1,36 @@
+@mixin rmMargin {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin initList {
+  list-style: none;
+	@include rmMargin;
+	box-sizing: border-box;
+}
+
+@mixin bgImg($url, $sx: 100%, $sy: 100%, $px: center, $py: center, $repeat: no-repeat) {
+	background-image: url($url);
+	background-size: $sx $sy;
+	background-position: $px $py;
+	background-repeat: $repeat;
+}
+
+@mixin size($w: 0, $h: 0) {
+	width: rem($w);
+	height: rem($h);
+}
+
+@mixin flex($direc: row, $x: center, $y: center, $wrap: nowrap) {
+	display: flex;
+	flex-direction: $direc;
+	justify-content: $x;
+	align-items: $y;
+	flex-wrap: $wrap;
+}
+
+@mixin only-screen($maxWidth: 200px) {
+  @media screen and (max-width: $maxWidth){
+    @content;
+  }
+}

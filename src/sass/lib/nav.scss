@@ -1,0 +1,9 @@
+// 导航栏
+
+@import "./_mixin";
+@import "./func";
+@import "./extend";
+@import "./variable";
+
+$navHeight: 70;
+$navMaxWidth: 1920 - 300;

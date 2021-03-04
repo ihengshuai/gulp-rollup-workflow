@@ -1,0 +1,40 @@
+// 公共
+
+@import "./lib/_mixin";
+@import "./lib/func";
+@import "./lib/extend";
+@import "./lib/variable";
+
+html {
+	font-size: #{$rootSize}px;
+	@include initList;
+}
+
+body {
+	@include rmMargin;
+	@include initList;
+	overflow-x: hidden;
+	height: auto;
+	box-sizing: border-box;
+
+	/* 导航栏 */
+	@import "./lib/nav";
+
+	/* 脚部 */
+	@import "./lib/footer";
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+::-webkit-scrollbar-track {
+	border-radius: 3px;
+	background: rgba(0, 0, 0, 0.06);
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.08);
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	background: rgba(0, 0, 0, 0.12);
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}

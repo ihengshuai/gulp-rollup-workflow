@@ -1,9 +1,14 @@
 // 公共
-
 @import "./lib/_mixin";
 @import "./lib/func";
 @import "./lib/extend";
 @import "./lib/variable";
+
+*,
+*::after,
+*::before{
+	box-sizing: border-box;
+}
 
 html {
 	font-size: #{$rootSize}px;
@@ -16,13 +21,14 @@ body {
 	overflow-x: hidden;
 	height: auto;
 	box-sizing: border-box;
-
-	/* 导航栏 */
-	@import "./lib/nav";
-
-	/* 脚部 */
-	@import "./lib/footer";
 }
+
+/* 导航栏 */
+@import "./lib/nav";
+
+/* 脚部 */
+@import "./lib/footer";
+
 
 ::-webkit-scrollbar {
 	width: 6px;

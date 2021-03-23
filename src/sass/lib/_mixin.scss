@@ -1,15 +1,22 @@
 @mixin rmMargin {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 @mixin initList {
-  list-style: none;
+	list-style: none;
 	@include rmMargin;
 	box-sizing: border-box;
 }
 
-@mixin bgImg($url, $sx: 100%, $sy: 100%, $px: center, $py: center, $repeat: no-repeat) {
+@mixin bgImg(
+	$url,
+	$sx: 100%,
+	$sy: 100%,
+	$px: center,
+	$py: center,
+	$repeat: no-repeat
+) {
 	background-image: url($url);
 	background-size: $sx $sy;
 	background-position: $px $py;
@@ -30,7 +37,25 @@
 }
 
 @mixin only-screen($maxWidth: 200px) {
-  @media screen and (max-width: $maxWidth){
-    @content;
-  }
+	@media screen and (max-width: $maxWidth) {
+		@content;
+	}
+}
+
+@mixin lineH($val: inherit) {
+	line-height: $val;
+}
+
+@mixin textMuchOver($isMuch: false, $overline: 2) {
+	@if $isMuch {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: $overline;
+		-webkit-box-orient: vertical;
+	} @else {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
 }

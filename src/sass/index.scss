@@ -1,0 +1,18 @@
+@import "./lib/_mixin";
+@import "./lib/func";
+@import "./lib/extend";
+@import "./lib/variable";
+
+
+.text-over{
+	width: 100px;
+	height: 60px;
+	font-size: rem(16);
+	line-height: rem(20);
+	word-break: break-all;
+	// 多行溢出
+	@include textMuchOver(true, 3);
+
+	// 单行溢出
+	// @include textMuchOver(false);
+}
